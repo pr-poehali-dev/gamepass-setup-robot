@@ -9,7 +9,7 @@ import Icon from '@/components/ui/icon';
 
 const ROBUX_IMG = 'https://cdn.poehali.dev/projects/3e69c204-f457-43e5-bb04-42488e64ec34/files/754b58d9-f84d-4b9b-adac-6175f611a270.jpg';
 
-const PRICE_PER_ROBUX = 0.55;
+const PRICE_PER_ROBUX = 1;
 
 const PACKS = [
   { amount: 100, tag: '' },
@@ -37,7 +37,7 @@ const Index = () => {
             <div className="w-9 h-9 rounded-lg bg-primary grid place-items-center neon-border">
               <Icon name="Gem" className="text-primary-foreground" size={20} />
             </div>
-            <span className="font-display text-2xl font-bold tracking-wider">ROBUY<span className="text-accent"> GG</span></span>
+            <span className="font-display text-2xl font-bold tracking-wider">RbxStore<span className="text-accent">.gg</span></span>
           </div>
           <div className="hidden sm:flex items-center gap-6 text-sm text-muted-foreground">
             <span className="flex items-center gap-1"><Icon name="ShieldCheck" size={16} className="text-accent" /> Гарантия</span>
@@ -60,15 +60,19 @@ const Index = () => {
               КУПИ <span className="text-primary text-glow">РОБУКСЫ</span> ВЫГОДНО
             </h1>
             <p className="text-muted-foreground text-lg mb-8 max-w-md">
-              Выбери нужное количество — цена посчитается автоматически. Зачисление на аккаунт за пару минут.
+              Выбери нужное количество — 1 ₽ = 1 робукс. Доставка через геймпасс за 5 дней.
             </p>
             <div className="flex gap-8">
-              {[['50K+', 'покупок'], ['0.55₽', 'за робукс'], ['2 мин', 'зачисление']].map(([v, l]) => (
+              {[['1 ₽', '= 1 робукс'], ['5 дней', 'ожидание'], ['через', 'геймпасс']].map(([v, l]) => (
                 <div key={l}>
                   <div className="font-display text-3xl font-bold text-accent">{v}</div>
                   <div className="text-sm text-muted-foreground">{l}</div>
                 </div>
               ))}
+            </div>
+            <div className="mt-5 flex items-start gap-2 rounded-xl bg-secondary/60 px-4 py-3 max-w-md">
+              <Icon name="Clock" size={18} className="text-accent mt-0.5 shrink-0" />
+              <p className="text-sm text-muted-foreground">Робуксы начисляются через геймпасс — <span className="text-foreground font-medium">ожидание до 5 дней</span> после оплаты.</p>
             </div>
           </div>
 
@@ -142,7 +146,7 @@ const Index = () => {
       {/* FEATURES */}
       <section className="container py-12 grid sm:grid-cols-3 gap-5">
         {[
-          { icon: 'Zap', t: 'Моментальное зачисление', d: 'Робуксы приходят за пару минут после оплаты' },
+          { icon: 'Clock', t: 'Доставка 5 дней', d: 'Робуксы зачисляются через геймпасс до 5 дней' },
           { icon: 'ShieldCheck', t: 'Безопасно', d: 'Полная гарантия и защита каждой покупки' },
           { icon: 'Wallet', t: 'Любая оплата', d: 'Карты, СБП, электронные кошельки' },
         ].map((f, i) => (
@@ -163,7 +167,7 @@ const Index = () => {
           {[
             { n: '01', t: 'Выбери сумму', d: 'Укажи количество робуксов в калькуляторе' },
             { n: '02', t: 'Оплати', d: 'Удобным для тебя способом онлайн' },
-            { n: '03', t: 'Получи робуксы', d: 'Зачисление на твой аккаунт за минуты' },
+            { n: '03', t: 'Получи робуксы', d: 'Зачисление через геймпасс — ожидание до 5 дней' },
           ].map((s, i) => (
             <div key={s.n} className="relative animate-float-up" style={{ animationDelay: `${i * 0.08}s` }}>
               <div className="font-display text-6xl font-bold text-primary/30 mb-2">{s.n}</div>
@@ -205,8 +209,8 @@ const Index = () => {
       {/* FOOTER */}
       <footer className="border-t border-border mt-10">
         <div className="container py-8 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
-          <span className="font-display text-lg font-bold text-foreground">ROBUY<span className="text-accent"> GG</span></span>
-          <span>© 2026 Robuy GG · Магазин робуксов</span>
+          <span className="font-display text-lg font-bold text-foreground">RbxStore<span className="text-accent">.gg</span></span>
+          <span>© 2026 RbxStore.gg · Магазин робуксов</span>
         </div>
       </footer>
     </div>
